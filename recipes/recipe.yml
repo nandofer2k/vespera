@@ -3,10 +3,10 @@
 # image will be published to ghcr.io/<user>/<name>
 name: vespera
 # description will be included in the image's metadata
-description: la distro basada en fedora atomic que hice un miercoles en la tarde por nomas ademas de ser customizable (emoji de ojoids) -nd2k
+description: la distro basada en fedora atomic que hice un miercoles en la tarde por nomas :v (emoji de ojoids) -nd2k
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
+base-image: ghcr.io/ublue-os/kinoite-main
 image-version: latest # You can pin to a specific version of Fedora as well
 
 # module configuration, executed in order
@@ -39,7 +39,7 @@ modules:
         # If no repo information is specified, Flathub will be used by default
         install: # system flatpaks we want all users to have and not remove
           - org.mozilla.firefox
-          - org.gnome.Loupe
+          - org.kde.gwenview
       - scope: user # Also add Flathub user repo, but no user packages
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
