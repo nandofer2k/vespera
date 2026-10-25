@@ -25,6 +25,9 @@ modules:
       packages:
         - micro
         - starship
+        - chafa
+        - fastfetch
+        - plymouth-plugin-script
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
@@ -41,5 +44,13 @@ modules:
           - org.mozilla.firefox
           - org.kde.gwenview
       - scope: user # Also add Flathub user repo, but no user packages
+  - type: initramfs
+
+  - type: os-release
+    properties:
+      ID: vespera
+      ID_LIKE: fedora
+      NAME: Véspera
+      PRETTY_NAME: Véspera Linux
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
