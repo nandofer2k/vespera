@@ -1,0 +1,15 @@
+{
+  "KPackageStructure": "Plasma/LookAndFeel",
+  "KPlugin": {
+    "Id": "com.vespera.desktop",
+    "Name": "Véspera",
+    "Description": "Tema de bienvenida de Véspera",
+    "Version": "1.0",
+    "License": "GPL-2.0-or-later",
+    "Authors": [
+      {
+        "Name": "nd2k"
+      }
+    ]
+  }
+}

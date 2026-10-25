@@ -1,0 +1,76 @@
+background_image = Image("background.png");
+
+screen_ratio = Window.GetHeight() / Window.GetWidth();
+background_ratio = background_image.GetHeight() / background_image.GetWidth();
+
+if (screen_ratio > background_ratio)
+{
+    scale_factor = Window.GetHeight() / background_image.GetHeight();
+}
+else
+{
+    scale_factor = Window.GetWidth() / background_image.GetWidth();
+}
+
+scaled_background = background_image.Scale(
+    background_image.GetWidth() * scale_factor,
+    background_image.GetHeight() * scale_factor
+);
+
+background_sprite = Sprite(scaled_background);
+background_sprite.SetPosition(
+    (Window.GetWidth() - scaled_background.GetWidth()) / 2,
+    (Window.GetHeight() - scaled_background.GetHeight()) / 2,
+    -100
+);
+frame = 1;
+tick = 0;
+
+image1 = Image("frame-01.png");
+image2 = Image("frame-02.png");
+image3 = Image("frame-03.png");
+image4 = Image("frame-04.png");
+image5 = Image("frame-05.png");
+image6 = Image("frame-06.png");
+image7 = Image("frame-07.png");
+image8 = Image("frame-08.png");
+image9 = Image("frame-09.png");
+image10 = Image("frame-10.png");
+image11 = Image("frame-11.png");
+
+spinner = Sprite(image1);
+spinner.SetPosition(
+    Window.GetWidth() / 2 - image1.GetWidth() / 2,
+    Window.GetHeight() * 0.79 - image1.GetHeight() / 2,
+    10
+);
+
+fun refresh_callback()
+{
+    tick = tick + 1;
+
+    if (tick >= 5)
+    {
+        tick = 0;
+        frame = frame + 1;
+
+        if (frame > 11)
+        {
+            frame = 1;
+        }
+
+        if (frame == 1)  { spinner.SetImage(image1); }
+        if (frame == 2)  { spinner.SetImage(image2); }
+        if (frame == 3)  { spinner.SetImage(image3); }
+        if (frame == 4)  { spinner.SetImage(image4); }
+        if (frame == 5)  { spinner.SetImage(image5); }
+        if (frame == 6)  { spinner.SetImage(image6); }
+        if (frame == 7)  { spinner.SetImage(image7); }
+        if (frame == 8)  { spinner.SetImage(image8); }
+        if (frame == 9)  { spinner.SetImage(image9); }
+        if (frame == 10) { spinner.SetImage(image10); }
+        if (frame == 11) { spinner.SetImage(image11); }
+    }
+}
+
+Plymouth.SetRefreshFunction(refresh_callback);
