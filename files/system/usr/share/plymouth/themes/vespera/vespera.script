@@ -27,21 +27,32 @@ frame = 1;
 tick = 0;
 
 image1 = Image("frame-01.png");
+image1 = image1.Scale(64, 64);
 image2 = Image("frame-02.png");
+image2 = image2.Scale(64, 64);
 image3 = Image("frame-03.png");
+image3 = image3.Scale(64, 64);
 image4 = Image("frame-04.png");
+image4 = image4.Scale(64, 64);
 image5 = Image("frame-05.png");
+image5 = image5.Scale(64, 64);
 image6 = Image("frame-06.png");
+image6 = image6.Scale(64, 64);
 image7 = Image("frame-07.png");
+image7 = image7.Scale(64, 64);
 image8 = Image("frame-08.png");
+image8 = image8.Scale(64, 64);
 image9 = Image("frame-09.png");
+image9 = image9.Scale(64, 64);
 image10 = Image("frame-10.png");
+image10 = image10.Scale(64, 64);
 image11 = Image("frame-11.png");
+image11 = image11.Scale(64,64);
 
 spinner = Sprite(image1);
 spinner.SetPosition(
     Window.GetWidth() / 2 - image1.GetWidth() / 2,
-    Window.GetHeight() * 0.79 - image1.GetHeight() / 2,
+    Window.GetHeight() * 0.92 - image1.GetHeight() / 2,
     10
 );
 
