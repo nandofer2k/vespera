@@ -52,7 +52,7 @@ image11 = image11.Scale(64,64);
 spinner = Sprite(image1);
 spinner.SetPosition(
     Window.GetWidth() / 2 - image1.GetWidth() / 2,
-    Window.GetHeight() * 0.92 - image1.GetHeight() / 2,
+    Window.GetHeight() * 0.65 - image1.GetHeight() / 2,
     10
 );
 
