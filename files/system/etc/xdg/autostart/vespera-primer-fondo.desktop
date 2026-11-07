@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Fondo inicial de Véspera
+Exec=/usr/bin/vespera-primer-fondo
+OnlyShowIn=KDE;
+NoDisplay=true
+Terminal=false

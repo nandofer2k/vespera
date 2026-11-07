@@ -1,0 +1,10 @@
+#!/bin/sh
+state_dir="${XDG_STATE_HOME:-$HOME/.local/state}/vespera"
+marker="$state_dir/fondo-inicial-aplicado"
+
+[ -e "$marker" ] && exit 0
+mkdir -p "$state_dir" || exit 1
+
+if plasma-apply-wallpaperimage /usr/share/vespera/fondo.png; then
+    touch "$marker"
+fi
